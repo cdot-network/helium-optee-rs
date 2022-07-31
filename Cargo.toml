@@ -1,0 +1,20 @@
+[package]
+name = "iotpi-helium-optee"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0"
+bytes = "1"
+thiserror = "1"
+p256 = { version="0.10", default-features=false, features=["arithmetic", "ecdsa", "sha256", "ecdh"] }
+
+[build-dependencies]
+cc = "1"
+bindgen = "0.60"
+
+[dev-dependencies]
+sha2 = "0"
